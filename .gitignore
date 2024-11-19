@@ -5,3 +5,4 @@ include
 lib
 pyvenv.cfg
 share
+__pycache__
