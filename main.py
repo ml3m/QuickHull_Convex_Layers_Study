@@ -37,9 +37,16 @@ def compute_convex_layers(points):
 fig, ax = plt.subplots(figsize=(X_WINDOW, Y_WINDOW))
 ax.set_xlim(0, X_LIM)
 ax.set_ylim(0, Y_LIM)
-ax.set_title("Convex Layers Animation")
-scat = ax.scatter(points[:, 0], points[:, 1], c=POINTS_COLOR, alpha=1.0, label='Points')
-line, = ax.plot([], [], 'r-', lw=2, label='Current Convex Hull')
+ax.set_title(TITLE_WINDOW)
+scat = ax.scatter(
+        points[:, 0], 
+        points[:, 1], 
+        c=POINTS_COLOR, 
+        s=POINT_SIZE,
+        alpha=1.0, 
+        label='Points'
+        )
+line, = ax.plot([], [], 'r-', lw=LINE_SIZE, label='Current Convex Hull')
 
 alphas = np.ones(len(points))
 previous_hulls = []
@@ -139,7 +146,8 @@ ax.legend(
     handles=[
         plt.Line2D([0], [0], color=CURRENT_HULL_COLOR, lw=2, label='Current Convex Hull'),
         plt.Line2D([0], [0], color=CHECKED_HULL_COLOR, lw=2, label='Verified Hulls'),
-        plt.Line2D([0], [0], color=POINTS_COLOR, marker='o', linestyle='', label='Points')
+        plt.Line2D([0], [0], color=POINTS_COLOR, marker='o', linestyle='', label='Points'),
+        plt.Line2D([0], [0], color=CHECKED_POINTS_COLOR, marker='o', linestyle='', label='Verified Points')
     ],
     loc='upper right'
 )
