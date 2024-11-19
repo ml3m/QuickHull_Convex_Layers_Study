@@ -1,9 +1,3 @@
-# QuickHull_Convex_Layers_Animation
-
-Great! You can include the photos in your `README.md` to provide visual examples of the project's output. Here's how you can integrate them:
-
----
-
 # Convex Hull Layers Animation
 
 This project visualizes the computation of convex hull layers from a set of random points in 2D space. Using a custom QuickHull implementation, the project iteratively computes and animates the removal of convex layers, revealing the nested structure of the point set.
