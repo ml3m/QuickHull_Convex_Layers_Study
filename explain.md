@@ -57,3 +57,17 @@ init_func=init, blit=True, interval=1000, repeat=False) plt.show() ```
 set of points step-by-step, visually highlighting the concept of iterative
 convex hull computation.
 
+
+Yes, it's normal for a convex hull algorithm applied to a set of random points to yield a single point in the last hull found, but it depends on the distribution of points.
+
+Here’s how it works:
+
+1. **Convex Hull**: The convex hull of a set of points is the smallest convex shape that contains all the points. It can be visualized as a rubber band stretched around the outermost points.
+
+2. **Multiple Layers**: When using algorithms like **Graham scan** or **Quickhull**, the process may involve finding multiple convex layers. In each layer, you find the convex hull of the remaining points, and points inside the hull are removed for the next iteration.
+
+3. **Final Point**: If you have a random distribution of points and the remaining points are all collinear (i.e., they lie on the same straight line), after a few iterations of finding convex hulls, you might be left with a single point. This is because, after the convex hull of the outermost points is found, the inner points may no longer form a hull but rather collapse into a single point.
+
+If your points are truly random in a 2D plane, the convex hull algorithm will iteratively peel off the outer layers of points. Once you’ve removed all but one point, the final hull will consist of that single point.
+
+If this seems unexpected based on your data, it could be helpful to check the distribution of your points—whether they form any structure that would cause this effect.

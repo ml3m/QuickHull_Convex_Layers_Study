@@ -5,7 +5,7 @@ from matplotlib.animation import FuncAnimation
 
 # Step 1: Generate random 2D points
 np.random.seed(42)  # For reproducibility
-num_points = 10
+num_points = 1000
 points = np.random.rand(num_points, 2) * 100  # Scale points to a 100x100 grid
 
 
@@ -18,6 +18,10 @@ def compute_convex_layers(points):
         hull = ConvexHull(remaining_points)
         layers.append(remaining_points[hull.vertices])  # Save current hull points
         remaining_points = np.delete(remaining_points, hull.vertices, axis=0)  # Remove hull points
+        
+        # If there are fewer than 3 points left, stop
+        if len(remaining_points) <= 2:
+            break
 
     return layers
 
@@ -59,7 +63,7 @@ def animate(i):
 
         # Move previous hulls to verified hulls and fade them
         for hull in previous_hulls:
-            hull.set_color('blue')
+            hull.set_color('gray')
             hull.set_alpha(0.4)
             verified_hulls.append(hull)
         previous_hulls.clear()
@@ -85,7 +89,7 @@ def animate(i):
 # Create animation
 ani = FuncAnimation(
         fig, animate, frames=len(convex_layers), 
-        init_func=init, blit=True, interval=300, repeat=False)
+        init_func=init, blit=True, interval=50, repeat=False)
 
 # Add updated legend
 ax.legend(
