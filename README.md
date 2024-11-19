@@ -21,7 +21,7 @@ Here are snapshots of the animation at various stages with different point densi
 
 | 50 Points             | 100 Points             | 1000 Points            |
 |-------------------------|------------------------|------------------------|
-| ![100 Points]("samples/50_points.png") | ![500 Points](samples/100_points.png) | ![1000 Points](samples/1000_points.png) |
+| ![50 Points]("samples/50_points.png") | ![500 Points](samples/100_points.png) | ![1000 Points](samples/1000_points.png) |
 
 | 5000 Points            | 10000 Points           |
 |------------------------|------------------------|
