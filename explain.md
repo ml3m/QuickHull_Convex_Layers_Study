@@ -4,6 +4,7 @@ This program visualizes the iterative construction of convex layers (or shells)
 from a set of 2D points using Matplotlib and animation. Below is a step-by-step
 breakdown of how the code works:
 
+
 ### 1. **Generate Random Points**
 - Using `numpy`, the code generates a set of random 2D points within a 100x100
   grid.
