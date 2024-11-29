@@ -1,1 +1,1 @@
-matplotlib, numpy
+matplotlib numpy
