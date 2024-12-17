@@ -197,8 +197,6 @@ for points_in_list in POINTS_LIST:
         )
 
 
-# this is the cause of me losing 3 hours of my life, fuck you.
-
 # by generating the gif here ,the total of hulls are rendered before the animation 
 # starts and therefore the animation is running on already drawin CHECKED hulls.
 # this put at the end will work I think so, but don't want any gif anymore.
