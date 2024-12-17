@@ -145,9 +145,22 @@ def animate(i):
     
     return [scat, line] + previous_hulls + verified_hulls
 
+
+
+# Options: 'grid', 'random', 'collinear'
+# Loop for each points_in_list
 for points_in_list in POINTS_LIST:
 
-    points = np.random.rand(points_in_list, 2) * POINTS_RANGE
+    # Generate points based on the selected method
+    if GEN_MODE == "grid":
+        grid_size = int(np.sqrt(points_in_list))  # Ensure the grid fits
+        points = generate_grid_points(grid_size, X_LIM, Y_LIM)
+    elif GEN_MODE == "random":
+        points = np.random.rand(points_in_list, 2) * POINTS_RANGE
+    elif GEN_MODE == "collinear":
+        points = generate_collinear_points(points_in_list, X_LIM)
+    else:
+        raise ValueError(f"Unknown generation method: {GEN_MODE}")
 
             # Animation setup
     fig, ax = plt.subplots(figsize=(X_WINDOW, Y_WINDOW))

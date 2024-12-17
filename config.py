@@ -23,6 +23,9 @@ LET_ANIMATION = True
 ANIMATION_INTERVAL_MS = 300
 
 
+# Options: 'grid', 'random', 'collinear'
+GEN_MODE = "collinear"
+
 # this is really bad, don't change it.
 # in the main.py window caption should be changed such that for each number in
 # POINTS_LIST will have a diff caption
