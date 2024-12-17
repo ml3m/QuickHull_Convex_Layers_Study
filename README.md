@@ -13,6 +13,7 @@ This project visualizes the computation of convex hull layers from a set of rand
 
 Here are snapshots of the animation at various stages with different point densities:
 
+RANDOM
 | 50 Points             | 100 Points             | 1000 Points            |
 |-------------------------|------------------------|------------------------|
 | ![50 Points](samples/50_points.png) | ![500 Points](samples/100_points.png) | ![1000 Points](samples/1000_points.png) |
@@ -20,6 +21,24 @@ Here are snapshots of the animation at various stages with different point densi
 | 5000 Points            | 10000 Points           |
 |------------------------|------------------------|
 | ![5000 Points](samples/5000_points.png) | ![15000 Points](samples/10000_points.png) |
+---
+GRID
+| 50 Points             | 100 Points             | 1000 Points            |
+|-------------------------|------------------------|------------------------|
+| ![50 Points](samples/50_grid.png) | ![500 Points](samples/100_grid.png) | ![1000 Points](samples/1000_grid.png) |
+
+| 5000 Points            | 10000 Points           |
+|------------------------|------------------------|
+| ![5000 Points](samples/5000_grid.png) | ![15000 Points](samples/10000_grid.png) |
+---
+COLLINEAR
+| 50 Points             | 100 Points             | 1000 Points            |
+|-------------------------|------------------------|------------------------|
+| ![50 Points](samples/50_col.png) | ![500 Points](samples/100_col.png) | ![1000 Points](samples/1000_col.png) |
+
+| 5000 Points            | 10000 Points           |
+|------------------------|------------------------|
+| ![5000 Points](samples/5000_col.png) | ![15000 Points](samples/10000_col.png) |
 
 Each image demonstrates how the convex hull layers evolve as the number of points increases. 
 

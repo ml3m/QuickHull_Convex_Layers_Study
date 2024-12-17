@@ -8,7 +8,7 @@ PERMIT_RANDOM_SEED = False
 
 RANDOM_SEED = 1330
 #POINTS_LIST = [1,5,10,50,100,250,500,1000,2000,3000,4000,5000,6000,7000,8000,9000,10000]
-POINTS_LIST = [250]
+POINTS_LIST = [50, 100, 1000, 5000, 10000]
 
 
 X_LIM = 1000
@@ -24,13 +24,12 @@ ANIMATION_INTERVAL_MS = 300
 
 
 # Options: 'grid', 'random', 'collinear'
-GEN_MODE = "collinear"
+GEN_MODE = "grid"
 
 # this is really bad, don't change it.
 # in the main.py window caption should be changed such that for each number in
 # POINTS_LIST will have a diff caption
 NUMBER_POINTS = 10000
-TITLE_WINDOW = f"Convex Layers Animation:{ANIMATION_INTERVAL_MS}ms with {NUMBER_POINTS} points and seed: {RANDOM_SEED}"
 
 
 CHECKED_HULL_COLOR = 'gray'

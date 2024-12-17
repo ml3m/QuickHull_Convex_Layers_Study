@@ -166,6 +166,8 @@ for points_in_list in POINTS_LIST:
     fig, ax = plt.subplots(figsize=(X_WINDOW, Y_WINDOW))
     ax.set_xlim(0, X_LIM)
     ax.set_ylim(0, Y_LIM)
+
+    TITLE_WINDOW = f"Convex Layers Animation:{ANIMATION_INTERVAL_MS}ms with {points_in_list} points. MODE: {GEN_MODE}, generative seed: {RANDOM_SEED}"
     ax.set_title(TITLE_WINDOW)
     scat = ax.scatter(
             points[:, 0], 
