@@ -1,4 +1,4 @@
-# Convex Hull Layers Animation
+# Convex Hull Layers
 
 This project visualizes the computation of convex hull layers from a set of random points in 2D space. Using a custom QuickHull implementation, the project iteratively computes and animates the removal of convex layers, revealing the nested structure of the point set.
 
